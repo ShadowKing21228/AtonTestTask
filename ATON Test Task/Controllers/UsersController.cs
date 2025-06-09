@@ -184,7 +184,7 @@ public partial class UsersController : ControllerBase
 
         await UsersRepository.ChangeUserRevokedStatus(recoveringLogin);
         await UsersRepository.ChangeModifiedStatus(recoveringLogin, loginIsModifying);
-        return new OkObjectResult("User is successfully deleted!");
+        return new OkObjectResult("User is successfully recovered!");
     }
     private static bool ClaimToRightConvert(string name) {
         return name == "Admin";
@@ -194,7 +194,7 @@ public partial class UsersController : ControllerBase
         var userRole = rightsOfChanging != null && ClaimToRightConvert(rightsOfChanging);
         var isChangingUserIsChangeable = loginOfChangeable.Equals(loginOfChanging);
         
-        if (await UsersRepository.IsUserExistedAsync(loginOfChangeable)) // Если изменяемого пользователя не существует
+        if (!await UsersRepository.IsUserExistedAsync(loginOfChangeable)) // Если изменяемого пользователя не существует
             return new BadRequestObjectResult("User is not exist and not existed");
         
         if (!userRole && !isChangingUserIsChangeable) // Если прав адмимна нет или изменяющий не является самим пользователем

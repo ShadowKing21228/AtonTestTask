@@ -8,6 +8,11 @@ public static class UsersRepository
     private static readonly DbContextOptions<DbConnectionFactory> Options = new DbContextOptionsBuilder<DbConnectionFactory>()
         .UseSqlite(DbConnectionFactory.DbPath)
         .Options;
+    public static async Task InitializeDatabaseAsync()
+    {
+        await using var db = new DbConnectionFactory(Options);
+        await db.Database.EnsureCreatedAsync();
+    }
     public static Task<bool> ValidateCredentialsAsync(string login, string password) {
         using var db = new DbConnectionFactory(Options);
         return db.Users.AnyAsync(user => user.Login == login && user.Password == password);

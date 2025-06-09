@@ -51,6 +51,7 @@ Resources/Raw/**/*.zip
 Resources/Raw/**/*.7z
 *.dsym
 *.plist
+app.db
 
 ### ASP.NET Core специфика ###
 # Файлы окружения

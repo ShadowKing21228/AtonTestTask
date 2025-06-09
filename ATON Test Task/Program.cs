@@ -1,3 +1,4 @@
+using ATON_Test_Task.Controllers;
 using ATON_Test_Task.Data;
 using ATON_Test_Task.Repositories;
 using ATON_Test_Task.Security;
@@ -12,6 +13,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
 builder.Services.AddDbContext<DbConnectionFactory>(options =>
     options.UseSqlite("Data Source=app.db"));
+await UsersRepository.InitializeDatabaseAsync();
+
 builder.Services.AddSwaggerGen(options => {
     options.SwaggerDoc("v1", new OpenApiInfo
     {
