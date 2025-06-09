@@ -24,7 +24,7 @@ It implements fundamental business system tasks such as:
 ## 🛠️ Getting Started
 Clone the repository and run the project:
 ```ssh
-git clone <repo-url>
+git clone https://github.com/ShadowKing21228/AtonTestTask
 cd "ATON Test Task"
 dotnet run
 ```
