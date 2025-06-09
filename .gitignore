@@ -1,0 +1,106 @@
+### Общие файлы для .NET ###
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.nupkg
+*.ncrunchsolution
+*.crunchsolution.local.xml
+.vs/
+artifacts/
+TestResults/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+[Pp]ackages/
+.launchsettings.json
+
+### .NET MAUI специфика ###
+# Файлы сборки и кэша
+bin/
+obj/
+*.binlog
+*.msbuild.*.log
+*.props.user
+*.csproj.user
+*.manifest
+*.cache
+
+# Файлы приложений и пакетов
+*.ipa
+*.apk
+*.aab
+*.appxbundle
+*.appxupload
+*.msix
+*.msixupload
+*.pdb
+*.ilk
+
+# Файлы окружения и сертификатов
+*.pfx
+*.p12
+*.keystore
+*.jks
+
+# Файлы ресурсов и временные файлы
+Resources/Raw/**/*.zip
+Resources/Raw/**/*.7z
+*.dsym
+*.plist
+
+### ASP.NET Core специфика ###
+# Файлы окружения
+.env
+*.env.local
+*.env.*.local
+
+# Логи и дампы
+*.log
+*.dump
+*.stackdump
+
+# Файлы базы данных
+*.mdf
+*.ldf
+*.sdf
+
+# Файлы публикации
+publish/
+*.pubxml
+
+### Rider (JetBrains) ###
+.idea/
+*.sln.iml
+*.csproj.iml
+*.DotSettings
+*.DotSettings.user
+_ReSharper.*
+*.ReSharper
+*.ReSharper.user
+*.sln.ide/
+*.csproj.ide/
+*.rider/
+*.cache/
+*.backup/
+*.swp
+
+### macOS ###
+.DS_Store
+._*
+
+### Windows ###
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+### Linux ###
+*.swp
+*~
+.fuse_hidden*
+.directory
+.trash-*
